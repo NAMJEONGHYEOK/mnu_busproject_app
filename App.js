@@ -27,6 +27,10 @@ import {
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import LoginScreen from './src/LoginScreen';
+import NoticeDetailScreen from './src/NoticeDetailScreen';
+import NoticeScreen from './src/NoticeScreen';
+import MainScreen from './src/MainScreen';
+
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -38,8 +42,8 @@ class App extends Component {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="Login"
-            component={LoginScreen}
+            name="Main"
+            component={MainScreen}
             options={{
               headerStyle: {
                 backgroundColor: '#5B79ED',
