@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React, { Component } from 'react';
 import {
-  TextInput,  StyleSheet,  View,  Text,  Image,  Button,  Linking
+  TextInput,  StyleSheet,  View,  Text,  Image,  Button,  Linking, FlatList
 } from 'react-native';
 import {
   NavigationContainer,
@@ -15,44 +15,31 @@ import { useState } from 'react';
 
 
 class NoticeScreen extends Component{
+
+  
+
+
   render() {
     return (
       <View style={styles.container}>
-
+        
         <View style={styles.contentbox}>
-          <View style={styles.contentlist_imagebox}>
-            <Image style={styles.contentlist_image} source={require('./images/testimage2.png')}/>
+        <TouchableOpacity style={styles.touch}>
+          <View style={styles.title}>
+              <Text style={styles.title_text}>글 제목</Text>
           </View>
-          <View style={styles.contentlist_titlebox}>
-            <TouchableOpacity>
-              <Text style={styles.contentlist_titletext}>글 제목 출력 1</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
 
-        <View style={styles.contentbox}>
-          <View style={styles.contentlist_imagebox}>
-            <Image style={styles.contentlist_image} source={require('./images/testimage2.png')}/>
+          <View style={styles.infobox}>
+            <View style={styles.infoleft}>
+              <Text style ={styles.info_text}>작성자</Text>
+            </View>  
+            <View style={styles.inforight}>
+              <Text style={styles.info_text}>작성일</Text>
+            </View>
           </View>
-          <View style={styles.contentlist_titlebox}>
-            <TouchableOpacity>
-              <Text style={styles.contentlist_titletext}>글 제목 출력 1</Text>
-            </TouchableOpacity>
-          </View>
+          </TouchableOpacity>
         </View>
-
-        <View style={styles.contentbox}>
-          <View style={styles.contentlist_imagebox}>
-            <Image style={styles.contentlist_image} source={require('./images/testimage2.png')}/>
-          </View>
-          <View style={styles.contentlist_titlebox}>
-            <TouchableOpacity>
-              <Text style={styles.contentlist_titletext}>글 제목 출력 1</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-
-  
+       
       </View>
     );
   }
@@ -65,46 +52,60 @@ const styles =StyleSheet.create({
     marginTop:10,
     marginBottom: 10,
     backgroundColor: 'white',
-    paddingLeft: '3%',
-    paddingRight: '3%',
+    paddingLeft: '6%',
+    paddingRight: '6%',
     flexDirection: 'column',
   },
-
+  touch: {
+    width:'100%',
+    height:'100%',
+    alignItems:'flex-start',
+    justifyContent:'center',
+  },
   contentbox: {
-    borderRadius: 5,
-    marginTop:'2%',
+    marginTop:5,
+    marginBottom:5,
+    borderRadius:5,
+    flexDirection:'column',
     width:'100%',
-    height:'10%',
-    flexDirection:'row',
-    backgroundColor:'yellow'
+    height:'15%',
+    borderWidth:2,
+    borderColor:'black'
   },
-
-  contentlist_imagebox: {
-   flex:1,
-   backgroundColor:'red'
-  },
-
-  contentlist_image: {
-    height:'100%', 
+  title: {
+    alignItems:'flex-start',
+    justifyContent:'center',
     width:'100%',
-    justifyContent: 'center',
-    alignItems:'center'
+    height:'65%',
+    paddingLeft:10,
   },
 
-  contentlist_titlebox: {
-    marginRight:15,
-    flex:5,
-    justifyContent: 'center',
+  title_text: {
+    fontSize:15,
+    fontWeight:'bold'
+  },
+  
+  infobox: {
+    paddingLeft:10,
+    flex:1,
+    width:'100%',
+    height:'30%',
+    flexDirection:'row'
   },
 
-  contentlist_titletext: {
-    fontSize:20,
-    fontWeight: 'bold',
-    paddingLeft:'5%',
-    justifyContent: 'center',
-    color:'black'
+  infoleft: {
+    flex:1,
+  },
+
+  inforight: {
+    flex:1,
+  },
+
+  info_text: {
+    fontSize:11,
+    textAlign:'right'
   }
-
+  
 })
 
 

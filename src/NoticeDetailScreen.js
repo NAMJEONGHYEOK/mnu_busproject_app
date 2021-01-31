@@ -56,13 +56,15 @@ const styles =StyleSheet.create({
   },
 
   title: {
+    borderTopWidth:1,
     paddingLeft:10,
     borderRadius: 5,
     width:'100%',
     height:'10%',
-    backgroundColor:'green',
     justifyContent: 'center',
     marginBottom:10,
+    borderBottomColor:'#dbdbdb',
+    borderBottomWidth:2
   },
 
   title_text: {
@@ -74,9 +76,10 @@ const styles =StyleSheet.create({
   },
 
   info: {
+    borderBottomColor:'#dbdbdb',
+    borderBottomWidth:2,
     paddingLeft:10,
     borderRadius: 5,
-    backgroundColor:'yellow',
     width:'100%',
     height:'8%',
     flexDirection:'row',
@@ -84,10 +87,14 @@ const styles =StyleSheet.create({
   },
 
   info_left: {
+    borderRightColor:'#dbdbdb',
+    borderRightWidth:1,
     flex:1,
   },
 
   info_right: {
+    borderLeftColor:'#dbdbdb',
+    borderLeftWidth:1,
     flex:1,
   },
 
@@ -105,7 +112,8 @@ const styles =StyleSheet.create({
     borderRadius: 5,
     width:'100%',
     height:'70%',
-    backgroundColor:'red'
+    borderBottomWidth:2,
+    borderBottomColor:'black'
   },
 
   body_text: {
@@ -113,7 +121,6 @@ const styles =StyleSheet.create({
     paddingLeft:10,
     fontSize:17,
     fontWeight:'300',
-
   }
 
 })

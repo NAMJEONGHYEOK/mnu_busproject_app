@@ -42,8 +42,8 @@ class App extends Component {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="Main"
-            component={MainScreen}
+            name="Login"
+            component={LoginScreen}
             options={{
               headerStyle: {
                 backgroundColor: '#5B79ED',
