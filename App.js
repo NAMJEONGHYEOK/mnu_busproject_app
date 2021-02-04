@@ -26,11 +26,13 @@ import {
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import LoginScreen from './src/LoginScreen';
+
 import Main from './src/main';
 import RouteReserve from './src/RouteReserve';
 import RouteResult from './src/RouteResult';
 import NoticeDetailScreen from './src/NoticeDetailScreen';
 import NoticeScreen from './src/NoticeScreen';
+
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();

@@ -26,6 +26,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import ToggleSwitch from 'toggle-switch-react-native';
 
 class LoginScreen extends Component {
+
   static navigationOptions = {
     headerShown: false,
   };
@@ -52,6 +53,7 @@ class LoginScreen extends Component {
             secureTextEntry={this.state.hidePassword}
           />
         </View>
+
 
         <View style={styles.buttonArea}>
           <TouchableOpacity
@@ -89,25 +91,29 @@ const styles = StyleSheet.create({
     paddingLeft: '6%',
     paddingRight: '6%',
   },
-  formArea: {
+  loginMainContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+},
+imageBox:{
+    width: 300,
+    height:200,
+    backgroundColor:'gray'
+},
+input: {
+  width:'100%',
+    height: '10%',
+    backgroundColor: '#ededed',
+    borderColor: '#ddd',
     borderWidth: 1,
-    borderColor: '#E0E0E0',
-    backgroundColor: '#E0E0E0',
     borderRadius: 5,
-    width: '100%',
-    paddingBottom: '3%',
-    marginTop: '6%',
-  },
-  TextFrom: { fontSize: 17, marginTop: 5, padding: 5, marginLeft: 10 },
-  TextFrom2: {
-    borderWidth: 1,
-    borderColor: '#E0E0E0',
-    backgroundColor: '#E0E0E0',
-    borderRadius: 5,
+
     width: '100%',
     paddingBottom: '3%',
     marginTop: '3%',
   },
+
   buttonArea: {
     width: '100%',
     height: 50,

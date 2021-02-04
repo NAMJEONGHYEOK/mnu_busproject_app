@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import React, { Component } from 'react';
 import {
+
   TextInput,
   StyleSheet,
   View,
@@ -17,6 +18,7 @@ import {
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { color } from 'react-native-reanimated';
 import { useState } from 'react';
+
 
 class NoticeDetailScreen extends Component {
   render() {
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 10,
+
     marginBottom: 10,
     backgroundColor: 'white',
     paddingLeft: '3%',
@@ -55,6 +58,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
+
     borderTopWidth: 1,
     paddingLeft: 10,
     borderRadius: 5,
@@ -101,10 +105,12 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     fontSize: 14,
     textAlign: 'left',
+
   },
 
   body: {
     paddingLeft: 10,
+
     marginTop: 10,
     marginBottom: 10,
     borderRadius: 5,
